@@ -54,15 +54,9 @@ namespace linqExercise3
         }
         static void Main(string[] args)
         {
-            //Console.WriteLine("If you want to enter students data by yourself, Enter 1.\n" +
-            //    "else if you prefer to read data from a provided text document, enter 2.");
-            //int flag = int.Parse(Console.ReadLine());
-            //Object[] std = new Student[] { };
-            //std = File.ReadAllText("students.txt").Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-            //var logFile = File.ReadAllLines("students.txt").ToString();
-            //var result = JsonConvert.DeserializeObject<Student>(logFile);
+            
             //List<Student> students = new List<Student>();
-            //for (int i = 1; i < 1; i++)
+            //for (int i = 0; i < 1; i++)
             //{
             //    Student student = new Student();
             //    List<Course> courses = new List<Course>();
@@ -73,7 +67,6 @@ namespace linqExercise3
             //       , DateTime.Parse(Console.ReadLine()), courses);
             //    students.Add(student);
             //}
-
             //Console.WriteLine("We are good to go! Enter any key to continue:");
             //Console.ReadLine();
             //Console.Clear();
