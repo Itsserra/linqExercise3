@@ -39,7 +39,7 @@ namespace linqExercise3
             public List<Course> GetCourse()
             {
                 courses = new List<Course>();
-                Console.WriteLine("How many course does this student have?");
+                Console.WriteLine("How many course does the student have?");
                 int courseCount = int.Parse(Console.ReadLine());
                 for (int i = 0; i < courseCount; i++)
                 {
@@ -54,51 +54,58 @@ namespace linqExercise3
         }
         static void Main(string[] args)
         {
-            
-            //List<Student> students = new List<Student>();
-            //for (int i = 0; i < 1; i++)
-            //{
-            //    Student student = new Student();
-            //    List<Course> courses = new List<Course>();
-            //    courses = student.GetCourse();
-            //    Console.WriteLine("Enter the student information\n" +
-            //        "name, family, id, father's name, birth day(as mm/dd/yyyy)");
-            //    student = new Student(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine()
-            //       , DateTime.Parse(Console.ReadLine()), courses);
-            //    students.Add(student);
-            //}
-            //Console.WriteLine("We are good to go! Enter any key to continue:");
-            //Console.ReadLine();
-            //Console.Clear();
+            Console.WriteLine("If you want to enter students data by yourself, Enter 1.\n" +
+                "else if you prefer to use provided data, press another number(recommended).");
+            int flag = int.Parse(Console.ReadLine());
+            List<Student> students = new List<Student>();
+            if (flag == 1)
+            {
+                Console.WriteLine("flag detected");
+                for (int i = 0; i < 1; i++)
+                {
+                    Student student = new Student();
+                    List<Course> courses = new List<Course>();
+                    courses = student.GetCourse();
+                    Console.WriteLine("Enter the student information\n" +
+                        "name, family, id, father's name, birth day(as mm/dd/yyyy)");
+                    student = new Student(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine()
+                       , DateTime.Parse(Console.ReadLine()), courses);
+                    students.Add(student);
+                }
+                Console.WriteLine("We are good to go! Enter any key to continue:");
+                Console.ReadLine();
+                Console.Clear();
+                goto Modification;
+            }
 
+            students = new List<Student>{
+                    new Student{name = "mehrab", family = "mehraban", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
+                    Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 7, 3),  new Course("riazi", 20, 3)
+                    }},
+                    new Student{name = "sara", family = "sarane", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/13/1999"), courses = new List<Course>{new
+                    Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
+                    }},
+                    new Student{name = "javid", family = "javidi", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
+                    Course("fizik", 10, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
+                    }},
+                    new Student{name = "ali", family = "alifar", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/11/2000"), courses = new List<Course>{new
+                    Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
+                    }},
+                    new Student{name = "tiran", family = "tirandaz", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
+                    Course("fizik", 20, 3), new Course("shimi", 20, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
+                    }},
+                    new Student{name = "taha", family = "tahami", ID = "92213021", father = "mohammad",
+                    birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
+                    Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 7, 3),  new Course("riazi", 20, 3)
+                    }} }
 
-            List<Student> students = new List<Student>{
-                new Student{name = "mehrab", family = "mehraban", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
-                Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 7, 3),  new Course("riazi", 20, 3)
-                }},
-                new Student{name = "sara", family = "sarane", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/13/1999"), courses = new List<Course>{new
-                Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
-                }},
-                new Student{name = "javid", family = "javidi", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
-                Course("fizik", 10, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
-                }},
-                new Student{name = "ali", family = "alifar", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/11/2000"), courses = new List<Course>{new
-                Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
-                }},
-                new Student{name = "tiran", family = "tirandaz", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
-                Course("fizik", 20, 3), new Course("shimi", 20, 3), new Course("zist", 5, 3),  new Course("riazi", 20, 3)
-                }},
-                new Student{name = "taha", family = "tahami", ID = "92213021", father = "mohammad",
-                birthYear =  DateTime.Parse("11/11/1999"), courses = new List<Course>{new
-                Course("fizik", 20, 3), new Course("shimi", 10, 3), new Course("zist", 7, 3),  new Course("riazi", 20, 3)
-                }} }
-
-            ;
+        ;
+        Modification:
             var modifiedStudents = students.Where(x => CheckMarks(x.courses)
             && x.family.Contains(x.name)
             && x.birthYear.Month % 2 == 1)
